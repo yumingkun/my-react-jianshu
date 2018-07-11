@@ -70,6 +70,19 @@ export  const  SearchWrapper=styled.div`
             color:#fff;
         }
     }
+    .yu-enter{
+        transition:all 0.2s ease-out;
+    }
+    .yu-enter-active{
+        width:240px
+    }
+    
+    .yu-exit{
+        transition:all 0.2s ease-out;
+    }
+    .yu-exit-active{
+        width:160px
+    }
 `;
 export const NavSearch=styled.input.attrs({
     placeholder:'搜索'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import {CSSTransition } from 'react-transition-group';
 
 import {
     HeaderWrapper,
@@ -44,14 +44,17 @@ class App extends Component {
                     <SearchWrapper>
 
                         {/*//对输入框添加样式*/}
-
+                        <CSSTransition
+                            in={this.state.focused}
+                            timeout={200}
+                            classNames='yu'
+                        >
                             <NavSearch
                                 className={this.state.focused?'focused':''}
                                 onFocus={this.handleInputFocus}
                                 onBlur={this.handleInoutBlur}
                             />
-
-
+                        </CSSTransition>
 
                         <i className={this.state.focused?'focused iconfont':'iconfont'}>&#xe61e;</i>
                     </SearchWrapper>
@@ -64,7 +67,7 @@ class App extends Component {
         this.setState({
             focused:true,
         });
-    }
+    };
     handleInoutBlur=()=>{
         this.setState({
             focused:false,
