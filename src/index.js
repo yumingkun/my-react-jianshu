@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './statics/iconfont/iconfont';
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
