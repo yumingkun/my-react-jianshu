@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 import {
     HeaderWrapper,
     Logo,
@@ -40,16 +42,35 @@ class App extends Component {
                     </Addition>
 
                     <SearchWrapper>
-                        <NavSearch
-                            className={this.state.focused?'focused':''}
-                        />
-                        <i className='iconfont'>&#xe61e;</i>
+
+                        {/*//对输入框添加样式*/}
+
+                            <NavSearch
+                                className={this.state.focused?'focused':''}
+                                onFocus={this.handleInputFocus}
+                                onBlur={this.handleInoutBlur}
+                            />
+
+
+
+                        <i className={this.state.focused?'focused iconfont':'iconfont'}>&#xe61e;</i>
                     </SearchWrapper>
                 </Nav>
 
             </HeaderWrapper>
         );
     }
+    handleInputFocus=()=>{
+        this.setState({
+            focused:true,
+        });
+    }
+    handleInoutBlur=()=>{
+        this.setState({
+            focused:false,
+        });
+    }
+
 }
 
 export default App;

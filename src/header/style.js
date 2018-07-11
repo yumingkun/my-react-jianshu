@@ -64,13 +64,20 @@ export  const  SearchWrapper=styled.div`
         line-height:30px;
         border-radius:15px;
         // background:green;
-        text-aline:center;
+        text-align:center;
+        &.focused{
+            background:#777;
+            color:#fff;
+        }
     }
 `;
 export const NavSearch=styled.input.attrs({
     placeholder:'搜索'
 })`
     width:160px;
+    &.focused {
+        width:200px;
+    }
     height:38px;
     padding:0 20px
     margin-top:9px;
@@ -85,10 +92,7 @@ export const NavSearch=styled.input.attrs({
     &::placeholder{
          color:#999
     }
-    //
-    &.focused{
-        width:200px;
-    }
+   
 `;
 export const Addition=styled.div`
      position:absolute;
