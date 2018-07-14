@@ -10,10 +10,13 @@ export  const HeaderWrapper=styled.div`
     border-bottom:1px solid #f0f0f0;
 `;
 
+//
+// export const Logo=styled.a.attrs({//添加属性等同（<a href='/'></a>）
+//     href:'/',
+// })`
 
-export const Logo=styled.a.attrs({//添加属性等同（<a href='/'></a>）
-    href:'/',
-})`
+//logo
+export const Logo=styled.div`
     position:absolute; //相对定位 
     top:0;
     left:0;
@@ -110,6 +113,8 @@ export const NavSearch=styled.input.attrs({
 //搜索面板
 export const SearchInfo=styled.div`
     position:absolute;
+    background-color:#fff;
+    opacity: 0.9;
     left:0;
     top:58px;
     width:240px;
