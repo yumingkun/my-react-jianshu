@@ -6,6 +6,7 @@ import HomeReducer from '../pages/home/store/reducer';
 import DetailReducer from '../pages/detail/store/reducer';
 import LoginReducer from '../pages/login/store/reducer';
 
+
 //把大的reducer拆分成若干小reducer
 
 //把若干小reducer合并

@@ -7,6 +7,7 @@ import {BrowserRouter,Route} from 'react-router-dom'//引入dom路由
 import Home from './pages/home';
 import Detail from './pages/detail';
 import Login from './pages/login'
+import Writer from './pages/writer';
 class App extends Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class App extends Component {
                         <Route path='/' exact  component={Home}/>{/*exact表示只有路径完全完全匹配，才渲染*/}
                         <Route path='/detail/:id' exact component={Detail} />{/*可以通过 /detail/1 访问*/}
                         <Route path='/login'  exact  component={Login}/>
+                        <Route path='/writer' exact component={Writer}/>
 
                     </div>
                 </BrowserRouter>
@@ -29,3 +31,4 @@ class App extends Component {
 }
 
 export default App;
+
