@@ -3,9 +3,9 @@ import * as actionTypes from "./actionTypes";
 
 
 
-export const getDetailData=()=>{
+export const getDetailData=(id)=>{
     return (dispatch)=>{
-        axios.get("/api/detail.json")
+        axios.get("/api/detail.json?id="+id)//通过不同id，获取不同的详情页
             .then((res)=>{
                 const result=res.data.data;
                 const action={

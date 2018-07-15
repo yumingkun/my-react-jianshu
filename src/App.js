@@ -17,7 +17,7 @@ class App extends Component {
                     <div>{/*路由规则*/}
                         <Header/>
                         <Route path='/' exact  component={Home}/>{/*exact表示只有路径完全完全匹配，才渲染*/}
-                        <Route path='/detail' exact component={Detail} />
+                        <Route path='/detail/:id' exact component={Detail} />{/*可以通过 /detail/1 访问*/}
                     </div>
                 </BrowserRouter>
 

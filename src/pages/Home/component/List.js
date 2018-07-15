@@ -15,7 +15,7 @@ class List extends Component{
                 {
                     artcleList.map((item,index) => {
                     return (
-                        <Link  key={index} to='/detail'>
+                        <Link  key={index} to={'/detail/'+item.get('id')}>
                             <ListItem  >{/*遍历需要一个key值*/}
 
                                 <img className='pic' alt="yu" src={item.get('imgUrl')}/>{/*获取immutable对象用get*/}

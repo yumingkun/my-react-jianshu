@@ -10,6 +10,7 @@ import * as actionCreator from './store/actionCreator';
 
 class Detail extends Component{
     render(){
+        // console.log(this.props.match.params.id);//可以获取上一个页面传过来的id
         return(
            <DetailWrapper>
                <Header>{this.props.title}</Header>
@@ -21,7 +22,7 @@ class Detail extends Component{
     }
     //页面加载完成之后
     componentDidMount(){
-        this.props.getDetailData();
+        this.props.getDetailData(this.props.match.params.id);
     }
 }
 
@@ -33,8 +34,8 @@ const mapStateToProps=(state)=>({
 
 //向store发送一个axios请求，并对state赋值
 const mapDispatchToProps=(dispatch)=>({
-    getDetailData(){
-        dispatch(actionCreator.getDetailData())
+    getDetailData(id){
+        dispatch(actionCreator.getDetailData(id))
     }
 });
 export default connect(mapStateToProps,mapDispatchToProps)(Detail);
