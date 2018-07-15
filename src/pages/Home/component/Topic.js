@@ -4,7 +4,6 @@ import {TopicItem,TopicWrapper} from '../style';
 
 import {connect} from 'react-redux';
 
-import '../style.css';
 class Topic extends Component{
     render(){
         return(

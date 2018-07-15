@@ -1,7 +1,6 @@
 import React,{PureComponent} from 'react';
 
 //PureComponent数据变化才重新渲染（性能优化）、时常和immutable结合
-import './style.css'
 
 //引入首页的各个组件
 import Topic from './component/Topic';

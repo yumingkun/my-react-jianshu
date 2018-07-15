@@ -72,7 +72,7 @@ export const ListItem=styled.div`
      border-bottom: 1px solid #dcdcdc;
      :hover{
          opacity: 0.6;
-         box-shadow:0px 5px 5px darkgray;
+          box-shadow:0px 2px 2px darkgray;
     }
 `;
 
@@ -131,7 +131,7 @@ export const LoadMore=styled.div`
     border: 2px solid #dcdcdc;
     :hover{
        opacity: 0.6;
-       box-shadow:0px 5px 5px darkgray;
+       box-shadow:0px 2px 2px darkgray;
     }
 
 `;
@@ -150,7 +150,8 @@ export const BackTop=styled.div`
     border-radius: 4px;
     :hover{
        opacity: 0.6;
-       box-shadow:0px 5px 5px darkgray;
+        
+       box-shadow:0px 2px 2px darkgray;
     }
 
 `;
