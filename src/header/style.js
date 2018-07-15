@@ -112,9 +112,10 @@ export const NavSearch=styled.input.attrs({
 `;
 //搜索面板
 export const SearchInfo=styled.div`
+    z-index: 2;
     position:absolute;
     background-color:#fff;
-    opacity: 0.9;
+    opacity: 0.95;
     left:0;
     top:58px;
     width:240px;

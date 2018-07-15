@@ -8,6 +8,7 @@ const  initState=fromJS({//把该对象变成不可更改对象
         page:1,
         totalPage:1,
         mouseIn:false,//鼠标移动到
+
 })
 ;
 

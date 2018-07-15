@@ -64,10 +64,10 @@ class Header extends Component{
 
     };
     render(){
-        const {focused,handleInputFocus,handleInputBlur,list}=this.props;
+        const {focused,handleInputFocus,handleInputBlur,list,login}=this.props;
         return(
             <HeaderWrapper>
-                <Link to='/'>
+                <Link to="/">
                     <Logo/>
                 </Link>
 
@@ -75,7 +75,12 @@ class Header extends Component{
                     <NavItem className='left active'>首页</NavItem>
                     <NavItem className='left'>下载App</NavItem>
 
-                    <NavItem className='right'>登录</NavItem>
+
+
+                    {
+                        login? <NavItem className='right'>退出</NavItem>:<Link to='/login'> <NavItem className='right'>登录</NavItem></Link>
+                    }
+
                     <NavItem className='right'>
                         <i className='iconfont'>&#xe636;</i>
                     </NavItem>
@@ -130,6 +135,7 @@ const mapStateToProps=(state)=>{//把store里的state映射到自定义属性上
       page:state.getIn(['header','page']),
       mouseIn:state.getIn(['header','mouseIn']),
       totalPage:state.getIn(['header','totalPage']),
+      login:state.getIn(['login','login'])
   }
 };
 const mapDispatchToProps=(dispatch)=>{

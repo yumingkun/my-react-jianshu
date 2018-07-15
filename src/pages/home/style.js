@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HomeWrapper=styled.div`
     width: 960px;
     margin: 0 auto;
-    border: 1px solid red;
+     
     overflow:hidden;
     margin-top:30px;
 `;
@@ -11,7 +11,7 @@ export const HomeWrapper=styled.div`
 export const HomeLeft=styled.div`
     float: left;
     width: 625px;
-    border: 1px solid red;
+     
     .banner-img{
         height:270px;
         width:625px;
@@ -22,14 +22,14 @@ export const HomeLeft=styled.div`
 export const HomeRight=styled.div`
     float: right;
     width: 280px;
-    border: 1px solid red;
+    
 `;
 export const TopicWrapper=styled.div`
-     border: 1px solid red;
+      
     overflow:hidden;
     padding: 20px 0 10px 0;
     margin-left: -16px;
-    border-bottom: 1px solid  #dcdcdc;
+    
     
 `;
 export const TopicItem=styled.div`

@@ -2,8 +2,9 @@
 import {combineReducers} from 'redux-immutable'
 import HeaderReducer from '../header/store/reducer';
 
-import HomeReducer from '../pages/Home/store/reducer';
-import DetailRducer from '../pages/detail/store/reducer';
+import HomeReducer from '../pages/home/store/reducer';
+import DetailReducer from '../pages/detail/store/reducer';
+import LoginReducer from '../pages/login/store/reducer';
 
 //把大的reducer拆分成若干小reducer
 
@@ -11,7 +12,8 @@ import DetailRducer from '../pages/detail/store/reducer';
 const reducer=combineReducers({
     header:HeaderReducer,
     home:HomeReducer,
-    detail:DetailRducer,
+    detail:DetailReducer,
+    login:LoginReducer,
 });
 
 export  default  reducer;
