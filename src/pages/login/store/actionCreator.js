@@ -20,3 +20,8 @@ export const login=(account,password)=>{
             })
     }
 };
+
+export const loginOut=()=>({
+    type:actionTypes.LOGINOUT,
+    value:false,
+});

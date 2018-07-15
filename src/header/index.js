@@ -7,6 +7,8 @@ import {connect} from 'react-redux';
 // import {searchBlur,searchFocus} from './store/actionCreator';
 import * as actionCreator from './store/actionCreator'//引入组件，并起别名
 
+import * as loginActionCreator from  '../pages/login/store/actionCreator';
+
 import {
     HeaderWrapper,
     Logo,
@@ -64,7 +66,7 @@ class Header extends Component{
 
     };
     render(){
-        const {focused,handleInputFocus,handleInputBlur,list,login}=this.props;
+        const {focused,handleInputFocus,handleInputBlur,list,login,loginOut}=this.props;
         return(
             <HeaderWrapper>
                 <Link to="/">
@@ -78,7 +80,7 @@ class Header extends Component{
 
 
                     {
-                        login? <NavItem className='right'>退出</NavItem>:<Link to='/login'> <NavItem className='right'>登录</NavItem></Link>
+                        login? <NavItem className='right' onClick={loginOut}>退出</NavItem>:<Link to='/login'> <NavItem className='right'>登录</NavItem></Link>
                     }
 
                     <NavItem className='right'>
@@ -161,8 +163,13 @@ const mapDispatchToProps=(dispatch)=>{
            }else {
                dispatch(actionCreator.changePage(1))
            }
-       }
+       },
 
+
+       //登出
+       loginOut(){
+         dispatch(loginActionCreator.loginOut());
+       }
     }
 };
 

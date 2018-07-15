@@ -12,6 +12,8 @@ export default (state=initState,action)=>{
 
     switch (action.type){
         case actionTypes.CHANGE_LOGIN:
+        return state.set('login',action.value);
+        case actionTypes.LOGINOUT:
             return state.set('login',action.value);
         default:
             return state;
